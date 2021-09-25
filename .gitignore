@@ -1,0 +1,5 @@
+__pycache__
+build
+dist
+cython_build
+src/app/*.so

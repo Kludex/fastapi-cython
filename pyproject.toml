@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Marcelo Trylesinski <marcelotryle@gmail.com>"]
+exclude = ["src/**/*.py"]
+include = ["src/**/*.so"]
+packages = [{ include = "app", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.68.1"
+uvicorn = { version = "^0.15.0", extras = ["standard"] }
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+Cython = "^3.0.0a9"
+flake8 = "^3.9.2"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
